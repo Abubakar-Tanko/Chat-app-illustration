@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'rubixR';
+    src: url(Rubix/static/Rubik-Regular.ttf);
+}
+@font-face {
+    font-family: 'rubixM';
+    src: url(Rubix/static/Rubik-Medium.ttf);
+}
+@font-face {
+    font-family: 'rubixB';
+    src: url(Rubix/static/Rubik-Bold.ttf);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: hsla(270, 20%, 96%, 0.1);
+    overflow: hidden;
+}
+article.back{
+    width: 40%;
+    height: 700px;
+    position: absolute;
+}
+article.pink-back{
+    border-radius: 0 0 50% 50%;
+    top: -80px;
+    left: -100px;
+    background-image: linear-gradient(30deg, hsl(264, 100%, 61%) 25%, hsl(293, 100%, 63%));
+}
+article.grey-back{
+    border-radius: 50% 50% 0 0;
+    bottom: -80px;
+    right: -220px;
+    background-color: hsla(270, 7%, 64%, 0.1);
+}
+section#main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 96px;
+    width: 1000px;
+    margin-left: 262px;
+    z-index: 1;
+}
+main#phone{
+    border: 10px solid hsl(0, 0%, 100%);
+    border-radius: 35px;
+    background-color: hsl(270, 20%, 96%);
+    display: flex;
+    flex-direction: column;
+    max-width: 260px;
+    box-shadow: 4px 8px 50px hsla(270, 7%, 64%, 0.6);
+}
+section#top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    border-radius: 25px 25px 10px 10px;
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    width: 100%;
+}
+section#top div#camera{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section#top div#after{
+    background-color: white;
+    border-radius: 0 0 16px 16px;
+    width: 60%;
+    height: 27px;
+}
+section#top ul{
+    line-height: 5px;
+}
+section#top ul li{
+    color: white;
+    font-size: 10px;
+}
+div#profile{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    height: 48px;
+    margin: 16px 0;
+}
+div#avatar{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+div#avatar h2{
+    color: white;
+    font-family: rubixR;
+    font-size: 11px;
+}
+div#avatar p{
+    color: hsl(276, 100%, 81%);
+    font-family: rubixR;
+    font-size: 8px;
+}
+div#avatar::before{
+    content: '❮';
+    color: white;
+}
+div#image{
+    width: 30px;
+}
+div#image img{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+div#name{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+section#chat{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 10px;
+}
+section#chat p:not(div.background-pink p){
+    font-size: 8px;
+    font-family: rubixR;
+}
+section.same div:not(div.time, div.img-flex, div.img-flex div){
+    margin-bottom: 6px;
+}
+section.same div.message:not(div.background-pink){
+    padding: 8px;
+}
+div.left{
+    float: left;
+    background-color: hsla(270, 7%, 64%, 0.1);
+    border-radius: 10px 10px 10px 5px;
+    width: 126px;
+}
+div.right{
+    float: right;
+    border-radius: 10px 10px 5px 10px;
+}
+div.white-back{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(271, 15%, 43%);
+    width: 130px;
+}
+div.white-back:nth-child(odd){
+    width: 92px;
+}
+div.img-flex{
+    display: flex;
+    gap: 10px;
+}
+div.img-flex div{
+    width: 50px;
+}
+div.img-flex div img{
+    width: 100%;
+    border-radius: 10px;
+}
+div.background-pink{
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px 8px 8px;
+    width: 170px;
+    color: white;
+}
+div.background-pink b{
+    font-size: 14px;
+    font-family: rubixB;
+}
+div.pink{
+    color: hsl(276, 55%, 52%);
+}
+div.background-pink div.time{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+div.background-pink span{
+    width: 15px;
+    height: 15px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+div.background-pink div.time p{
+    font-size: 9px;
+    font-family: rubixM;
+}
+div#type{
+    width: 100%;
+    color: hsl(206, 6%, 79%);
+    padding: 5px 5px 5px 15px;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div#type div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: hsl(271, 36%, 24%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+div#type div::after{
+    content: '❯';
+}
+main#text{
+    width: 384px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+main#text h1{
+    font-size: 36px;
+    font-family: rubixR;
+    color: hsl(271, 36%, 24%);
+}
+main#text p{
+    font-size: 14px;
+    font-family: rubixR;
+    color: hsl(270, 7%, 64%);
+    width: 386px;
+    line-height: 1.7;
+}
+div.attribution{
+    font-family: rubixM;
+}
+a{
+    transition: 0.4s;
+}
+div.attribution a:hover{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: rubixB;
+}
+@media screen and (max-width: 375px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        overflow: auto;
+    }
+    article.back{
+        width: 100%;
+        height: 500px;
+    }
+    article.pink-back{
+        top: 0;
+        left: -190px;
+    }
+    article.grey-back{
+        bottom: -200px;
+        right: 0px;
+        border-radius: 93% 0 0 0;
+        width: 54%;
+    }
+    section#main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        margin-top: 80px;
+        gap: 40px;
+    }
+    main#phone{
+        width: 240px;
+    }
+    section#top::after{
+        top: 7%;
+        left: 30%;
+        width: 40%;
+    }
+    main#text{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    main#text h1{
+        font-size: 40px;
+    }
+    main#text p{
+        width: 265px;
+    }
+    div.attribution{
+        font-size: 12px;
+    }
+}
